@@ -28,6 +28,19 @@ PRODUCT_PACKAGES += \
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
+# Charger
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/charger/images/battery_fail.png:$(TARGET_COPY_OUT_PRODUCT)/etc/res/images/charger/battery_fail.png \
+    $(LOCAL_PATH)/charger/images/battery_fail.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/battery_fail.png \
+    $(LOCAL_PATH)/charger/images/battery_scale.png:$(TARGET_COPY_OUT_PRODUCT)/etc/res/images/charger/battery_scale.png \
+    $(LOCAL_PATH)/charger/images/battery_scale.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/battery_scale.png \
+    $(LOCAL_PATH)/charger/images/main_font.png:$(TARGET_COPY_OUT_PRODUCT)/etc/res/images/charger/main_font.png \
+    $(LOCAL_PATH)/charger/images/main_font.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/charger/main_font.png \
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/charger/values/animation.txt:$(TARGET_COPY_OUT_PRODUCT)/etc/res/values/charger/animation.txt \
+    $(LOCAL_PATH)/charger/values/animation.txt:$(TARGET_COPY_OUT_VENDOR)/etc/res/values/charger/animation.txt \
+
 # DRM - Widevine
 #ifeq ($(WITH_GMS_MAINLINE),true)
 include vendor/widevine/service.mk

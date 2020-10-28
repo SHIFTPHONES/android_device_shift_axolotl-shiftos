@@ -40,6 +40,9 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS :=
 
 #############################################################
 
+# Charger
+WITH_LINEAGE_CHARGER := false
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
