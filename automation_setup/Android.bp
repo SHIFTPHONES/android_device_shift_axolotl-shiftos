@@ -1,0 +1,12 @@
+//
+// Copyright 2021-2022 Fairphone B.V.
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_prebuilt_binary {
+    name: "automation_setup",
+
+    srcs: ["automation_setup.sh"],
+    init_rc: ["automation_setup.rc"],
+}

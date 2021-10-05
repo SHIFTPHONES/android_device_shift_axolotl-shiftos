@@ -1,0 +1,15 @@
+#
+# Copyright 2021-2022 Fairphone B.V.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on load_persist_props_action
+    start automation_setup
+
+service automation_setup /system/bin/automation_setup
+    user system
+    group root
+    stdio_to_kmsg
+    oneshot
+    disabled
