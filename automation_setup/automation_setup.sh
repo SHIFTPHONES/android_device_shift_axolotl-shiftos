@@ -32,4 +32,13 @@ settings_put secure user_setup_complete 1
 # Remove trigger so we don't run again
 rm -v /data/userdata_automation/trigger
 
+echo >&2 "+++ AUTOMATION: Waiting for late boot trigger. +++"
+while [ "$(getprop sys.boot_completed)" != "1" ]; do
+    # Full boot can take a while, especially after factory reset.
+    sleep 2
+done
+
+# Enable mobile data. Requires service `phone` to be running.
+svc data enable
+
 echo >&2 "+++ TRIGGERING AUTOMATION SETUP FOR ATS DONE +++"
