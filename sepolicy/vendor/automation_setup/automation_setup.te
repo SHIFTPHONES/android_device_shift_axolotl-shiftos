@@ -22,6 +22,11 @@ allow automation_setup userdata_automation_file:file create_file_perms;
 allow automation_setup adb_keys_file:dir rw_dir_perms;
 allow automation_setup adb_keys_file:file create_file_perms;
 
+# Allow enabling mobile data
+allow automation_setup radio_service:service_manager find;
+binder_call(automation_setup, radio)
+binder_call(radio, automation_setup)
+
 # Allow cmd settings put
 allow automation_setup settings_service:service_manager find;
 binder_call(automation_setup, servicemanager)
