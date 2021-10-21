@@ -5,10 +5,18 @@
 #
 
 on load_persist_props_action
+    start automation_adb_setup
     start automation_setup
 
+service automation_adb_setup /system/bin/automation_adb_setup
+     user system
+     group root
+     stdio_to_kmsg
+     oneshot
+     disabled
+
 service automation_setup /system/bin/automation_setup
-    user system
+    user root
     group root
     stdio_to_kmsg
     oneshot

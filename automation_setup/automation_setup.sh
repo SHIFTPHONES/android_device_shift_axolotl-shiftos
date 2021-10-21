@@ -15,12 +15,10 @@ settings_put() {
 # Output on stderr, to be picked up via stdio_to_kmsg on kmsg.
 echo >&2 "+++ TRIGGERING AUTOMATION SETUP FOR ATS +++"
 
-# Move supplied adb public key to correct directory
-mv -v /data/userdata_automation/adb_keys /data/misc/adb/adb_keys
-chown -v 1000:2000 /data/misc/adb/adb_keys
+# Following `settings put` calls must run as root from Android 11 on. The
+# `system` user doesn't have enough permissions.
 
-# Enable adb
-setprop persist.sys.usb.config adb
+# Enable adb, system settings part
 settings_put global development_settings_enabled 1
 settings_put global verifier_verify_adb_installs 0
 settings_put global adb_enabled 1
