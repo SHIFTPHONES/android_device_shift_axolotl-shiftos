@@ -4,15 +4,15 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-cc_prebuilt_binary {
+sh_binary {
     name: "automation_setup",
 
-    srcs: ["automation_setup.sh"],
+    src: "automation_setup.sh",
     init_rc: ["automation_setup.rc"],
 }
 
-cc_prebuilt_binary {
+sh_binary {
     name: "automation_adb_setup",
 
-    srcs: ["automation_adb_setup.sh"],
+    src: "automation_adb_setup.sh",
 }
