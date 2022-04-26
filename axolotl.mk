@@ -12,3 +12,13 @@ $(call inherit-product, vendor/shiftos/config/common_full.mk)
 
 # Override product name for SHIFT.
 PRODUCT_NAME := axolotl
+
+#############################################################
+
+# Widevine
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4-service.widevine \
+
+PRODUCT_PACKAGES += \
+    libwvdrmengine \
+    libwvhidl \
