@@ -15,6 +15,9 @@ PRODUCT_NAME := axolotl
 
 #############################################################
 
+# Build super partition
+PRODUCT_BUILD_SUPER_PARTITION := true
+
 # Widevine
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.widevine \
