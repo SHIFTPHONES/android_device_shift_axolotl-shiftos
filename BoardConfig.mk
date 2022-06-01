@@ -14,3 +14,6 @@ else
         TARGET_KERNEL_CONFIG := axolotl_user_defconfig
     endif
 endif
+
+# Security patch level
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
