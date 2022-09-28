@@ -37,5 +37,8 @@ binder_call(system_server, automation_setup)
 # Allow setprop
 set_prop(automation_setup, system_prop)
 
+# Allow enabling mock modem for CTS (persist.radio.allow_mock_modem)
+set_prop(automation_setup, radio_control_prop)
+
 # Allow service option "stdio_to_kmsg"
 allow automation_setup kmsg_debug_device:chr_file { ioctl open getattr append write };

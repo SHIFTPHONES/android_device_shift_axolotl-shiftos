@@ -27,6 +27,9 @@ settings_put global adb_enabled 1
 settings_put global device_provisioned 1
 settings_put secure user_setup_complete 1
 
+# Allow "mock" modem for Android 13 and beyond
+setprop persist.radio.allow_mock_modem true
+
 # Remove trigger so we don't run again
 rm -v /data/userdata_automation/trigger
 
