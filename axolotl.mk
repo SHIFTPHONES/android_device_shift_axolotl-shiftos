@@ -15,6 +15,8 @@ PRODUCT_NAME := axolotl
 
 #############################################################
 
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
+
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
