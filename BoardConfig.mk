@@ -40,6 +40,9 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS :=
 
 #############################################################
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Kernel
 ifeq ($(TARGET_BUILD_VARIANT),eng)
     TARGET_KERNEL_CONFIG := axolotl_eng_defconfig
