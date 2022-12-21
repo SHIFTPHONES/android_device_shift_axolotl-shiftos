@@ -19,6 +19,6 @@ PRODUCT_NAME := axolotl
 PRODUCT_BUILD_SUPER_PARTITION := true
 
 # DRM - Widevine
-ifeq ($(WITH_GMS_MAINLINE),true)
+#ifeq ($(WITH_GMS_MAINLINE),true)
 include vendor/widevine/service.mk
-endif
+#endif
