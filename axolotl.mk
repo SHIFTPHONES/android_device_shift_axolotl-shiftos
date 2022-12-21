@@ -18,10 +18,7 @@ PRODUCT_NAME := axolotl
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
-# Widevine
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.widevine \
-
-PRODUCT_PACKAGES += \
-    libwvdrmengine \
-    libwvhidl \
+# DRM - Widevine
+ifeq ($(WITH_GMS_MAINLINE),true)
+include vendor/widevine/service.mk
+endif
