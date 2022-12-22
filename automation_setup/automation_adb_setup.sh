@@ -6,10 +6,14 @@ if [ ! -f /data/userdata_automation/trigger ]; then
     exit 0
 fi
 
+# Output on stderr, to be picked up via stdio_to_kmsg on kmsg.
+echo >&2 "+++ TRIGGERING AUTOMATION ADB SETUP FOR ATS +++"
+
 # Move supplied adb public key to correct directory
 # Must run under system user to match owner of /data/misc/adb/.
 mv -v /data/userdata_automation/adb_keys /data/misc/adb/adb_keys
 chown -v 1000:2000 /data/misc/adb/adb_keys
+
 # Enable adb, system property part
 setprop persist.sys.usb.config adb
 
