@@ -9,6 +9,10 @@ sh_binary {
 
     src: "automation_setup.sh",
     init_rc: ["automation_setup.rc"],
+
+    required: [
+        "automation_adb_setup",
+    ],
 }
 
 sh_binary {
