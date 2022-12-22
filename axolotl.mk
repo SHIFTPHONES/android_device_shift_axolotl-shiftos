@@ -17,6 +17,10 @@ PRODUCT_NAME := axolotl
 
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
 
+# Automation/ATS
+PRODUCT_PACKAGES += \
+	automation_setup \
+
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
