@@ -6,11 +6,11 @@
 
 ### AVB
 
-ifeq ($(WITH_GMS_MAINLINE),true)
-    PRIVATE_KEY_PATH := vendor/shiftos/private/keys/mainline/avb-4096.pem
-else
+#ifeq ($(WITH_GMS_MAINLINE),true)
+#    PRIVATE_KEY_PATH := vendor/shiftos/private/keys/mainline/avb-4096.pem
+#else
     PRIVATE_KEY_PATH := vendor/shiftos/private/keys/stock/avb-4096.pem
-endif
+#endif
 
 # If private key does not exist, fallback to testkey
 ifeq ($(wildcard $(PRIVATE_KEY_PATH)),)
