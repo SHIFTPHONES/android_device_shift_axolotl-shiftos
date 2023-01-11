@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "230dfebc_53d0dfa5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2023-01-11T18:02:27Z",
+      "side": 1,
+      "message": "This does not work and needs additional adjustments, especially sepolicy changes.\n\nI guess it would be easiest to just set up an ATS config step to configure it using ATS after bootup.\n\nThe current automation setup is enough to get ADB working, so ATS can take over.",
+      "revId": "aeb15c24ff4dd107063186366a3e90d0b7f011e7",
+      "serverId": "5979fb85-960d-4ec4-8ce0-8568b21942fe"
+    }
+  ]
+}
