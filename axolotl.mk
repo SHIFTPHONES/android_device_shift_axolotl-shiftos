@@ -25,6 +25,10 @@ MAINLINE_COMPRESS_APEX_ALL := $(PRODUCT_COMPRESSED_APEX)
 PRODUCT_PACKAGES += \
     automation_setup \
 
+ifeq ($(WITH_AUTOMATION_USERDATA),true)
+PRODUCT_PACKAGES += automation_trigger
+endif
+
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
