@@ -40,6 +40,14 @@ endif
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
+# GMS
+ifeq ($(WITH_64_BIT_ONLY),false)
+GMS_MAKEFILE := gms_eea_v2_type4c.mk
+else
+GMS_MAKEFILE := gms_eea_v2_type4c_64bit_only.mk
+endif
+#MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
+
 # Widevine
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.widevine \
