@@ -1,10 +1,13 @@
 #
-# Copyright (C) 2022 SHIFT GmbH
+# Copyright (C) 2022-2023 SHIFT GmbH
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 ### AVB
+
+# Enable AVB 2.0
+BOARD_AVB_ENABLE := true
 
 #ifeq ($(WITH_GMS_MAINLINE),true)
 #    PRIVATE_KEY_PATH := vendor/shiftos/private/keys/mainline/avb-4096.pem
