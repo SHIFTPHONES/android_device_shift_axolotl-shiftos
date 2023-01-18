@@ -13,6 +13,14 @@ $(call inherit-product, vendor/shiftos/config/common_full.mk)
 # Override product name for SHIFT.
 PRODUCT_NAME := axolotl
 
+# GMS
+ifneq ($(WITH_64_BIT_ONLY),true)
+GMS_MAKEFILE := gms_eea_v2_type4c.mk
+else
+GMS_MAKEFILE := gms_eea_v2_type4c_64bit_only.mk
+endif
+#MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
+
 #############################################################
 
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
