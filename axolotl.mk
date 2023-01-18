@@ -40,7 +40,10 @@ endif
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
-# DRM - Widevine
-#ifeq ($(WITH_GMS_MAINLINE),true)
-include vendor/widevine/service.mk
-#endif
+# Widevine
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3-service.widevine \
+
+PRODUCT_PACKAGES += \
+    libwvdrmengine \
+    libwvhidl \
