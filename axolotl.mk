@@ -49,6 +49,6 @@ endif
 #MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
 # Widevine
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.widevine \
-    libwvhidl \
+#PRODUCT_PACKAGES += \
+#    android.hardware.drm@1.3-service.widevine \
+#    libwvhidl@1.3 \
