@@ -62,3 +62,14 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += device/shift/axolotl/shiftos/sepolicy/vendor/automation_setup
+
+######################
+# Qualcomm Proprietary
+#
+
+# Sensors
+USE_SENSOR_HAL_VER := 2.0
+USE_SENSOR_MULTI_HAL := true
+
+#
+######################
