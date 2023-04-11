@@ -40,6 +40,16 @@ endif
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
 
+# DRM
+PRODUCT_PACKAGES += \
+    drmserver \
+    libdrmframework \
+    libdrmframework_jni \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true \
+
 # Enforce priv-app permissions
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=log
