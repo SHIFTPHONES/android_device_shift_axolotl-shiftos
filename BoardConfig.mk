@@ -47,15 +47,15 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS :=
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Kernel
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-    TARGET_KERNEL_CONFIG := axolotl_eng_defconfig
-else
-    ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-        TARGET_KERNEL_CONFIG := axolotl_userdebug_defconfig
-    else
-        TARGET_KERNEL_CONFIG := axolotl_user_defconfig
-    endif
-endif
+#ifeq ($(TARGET_BUILD_VARIANT),eng)
+#    TARGET_KERNEL_CONFIG := axolotl_eng_defconfig
+#else
+#    ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+#        TARGET_KERNEL_CONFIG := axolotl_userdebug_defconfig
+#    else
+#        TARGET_KERNEL_CONFIG := axolotl_user_defconfig
+#    endif
+#endif
 
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
