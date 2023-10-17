@@ -47,14 +47,11 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS :=
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Kernel
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-    TARGET_KERNEL_CONFIG := axolotl_eng_defconfig
-else
-    ifeq ($(TARGET_BUILD_VARIANT),userdebug)
-        TARGET_KERNEL_CONFIG := axolotl_userdebug_defconfig
-    else
-        TARGET_KERNEL_CONFIG := axolotl_user_defconfig
-    endif
+ifeq ($(TARGET_BUILD_VARIANT),userdebug)
+    TARGET_KERNEL_CONFIG += vendor/shift/debug.config
+
+    # Enable console for userdebug
+    BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000
 endif
 
 # Security patch level
