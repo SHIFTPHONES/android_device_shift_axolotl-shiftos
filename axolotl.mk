@@ -65,7 +65,7 @@ GMS_MAKEFILE := gms_eea_v2_type4c_64bit_only.mk
 endif
 MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
-# Widevine
-PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.widevine \
-    libwvhidl \
+# DRM - Widevine
+#ifeq ($(WITH_GMS_MAINLINE),true)
+include vendor/widevine/service.mk
+#endif
