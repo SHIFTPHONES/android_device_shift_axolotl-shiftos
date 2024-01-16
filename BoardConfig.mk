@@ -46,6 +46,9 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS :=
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# DRM - Widevine
+BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
+
 # Kernel
 ifeq ($(TARGET_BUILD_VARIANT),userdebug)
     TARGET_KERNEL_CONFIG += vendor/shift/debug.config
