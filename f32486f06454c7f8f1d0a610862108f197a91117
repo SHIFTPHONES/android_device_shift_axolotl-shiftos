@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f0a9778_b3662eca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2024-06-07T06:44:44Z",
+      "side": 1,
+      "message": "Set defaults for env flags in buildspec.mk or invert the if statement in both android_device_shift_axolotl and here to change defaults instead of hardcoding a flag.",
+      "revId": "f32486f06454c7f8f1d0a610862108f197a91117",
+      "serverId": "5979fb85-960d-4ec4-8ce0-8568b21942fe"
+    }
+  ]
+}
