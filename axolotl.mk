@@ -58,6 +58,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 endif
 
 # GMS
+WITH_64_BIT_ONLY := false
 ifeq ($(WITH_64_BIT_ONLY),false)
 GMS_MAKEFILE := gms_eea_v2_type4c.mk
 else
