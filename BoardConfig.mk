@@ -52,8 +52,10 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
 else
     ifeq ($(TARGET_BUILD_VARIANT),userdebug)
         TARGET_KERNEL_CONFIG := axolotl_userdebug_defconfig
+        TARGET_KERNEL_CONFIG += vendor/debugfs.config
     else
         TARGET_KERNEL_CONFIG := axolotl_user_defconfig
+        TARGET_KERNEL_CONFIG += vendor/debugfs.config
     endif
 endif
 
