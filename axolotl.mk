@@ -65,5 +65,10 @@ GMS_MAKEFILE := gms_eea_v2_type4c_64bit_only.mk
 endif
 MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
+# SU
+ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_PACKAGES += su
+endif
+
 # DRM - Widevine
 include vendor/widevine/service.mk

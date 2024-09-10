@@ -62,6 +62,7 @@ endif
 # Enable console for non-user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
     BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000
+    BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 endif
 
 # Security patch level
