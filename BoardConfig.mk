@@ -66,7 +66,7 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 endif
 
 # Security patch level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+VENDOR_SECURITY_PATCH := 2023-10-05
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += device/shift/axolotl/shiftos/sepolicy/vendor/automation_setup
