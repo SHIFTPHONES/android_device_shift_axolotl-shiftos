@@ -65,5 +65,12 @@ GMS_MAKEFILE := gms_eea_v2_type4c_64bit_only.mk
 endif
 MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
+# Overlays
+ifeq ($(WITH_GMS),true)
+DEVICE_PACKAGE_OVERLAYS += device/shift/axolotl/shiftos/overlays/g
+else
+DEVICE_PACKAGE_OVERLAYS += device/shift/axolotl/shiftos/overlays/l
+endif
+
 # DRM - Widevine
 include vendor/widevine/service.mk
