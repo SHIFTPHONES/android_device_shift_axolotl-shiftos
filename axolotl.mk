@@ -62,4 +62,4 @@ GMS_MAKEFILE := gms_eea_v2_type4c.mk
 MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
 # DRM - Widevine
-include vendor/widevine/service.mk
+#include vendor/widevine/service.mk
