@@ -58,11 +58,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
 endif
 
 # GMS
-ifeq ($(WITH_64_BIT_ONLY),false)
 GMS_MAKEFILE := gms_eea_v2_type4c.mk
-else
-GMS_MAKEFILE := gms_eea_v2_type4c_64bit_only.mk
-endif
 MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
 # DRM - Widevine
