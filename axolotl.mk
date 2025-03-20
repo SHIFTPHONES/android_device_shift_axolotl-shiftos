@@ -65,4 +65,4 @@ MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 PRODUCT_PACKAGES += AxolotlFrameworksOverlay
 
 # DRM - Widevine
-include vendor/widevine/service.mk
+#include vendor/widevine/service.mk
