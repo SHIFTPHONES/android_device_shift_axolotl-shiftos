@@ -18,10 +18,10 @@ PRODUCT_NAME := axolotl
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
 
 # Enforce native interfaces of product partition as VNDK
-PRODUCT_PRODUCT_VNDK_VERSION := current
+#PRODUCT_PRODUCT_VNDK_VERSION := current
 
 # Enforce java interfaces of product partition
-PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
+#PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
 
 #############################################################
 
