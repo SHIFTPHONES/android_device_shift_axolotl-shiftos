@@ -61,5 +61,8 @@ endif
 GMS_MAKEFILE := gms_eea_v2_type4c.mk
 MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
 
+# Overlays
+PRODUCT_PACKAGES += AxolotlFrameworksOverlay
+
 # DRM - Widevine
 include vendor/widevine/service.mk
