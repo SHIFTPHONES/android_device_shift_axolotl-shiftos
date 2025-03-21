@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "110e80a3_53ad67fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000002
+      },
+      "writtenOn": "2025-03-21T15:12:02Z",
+      "side": 1,
+      "message": "Something to check later on, but maybe just staying on prebuilts from sos-5.x is fine?",
+      "revId": "09a1308b7516d0bd64dc7e10c234a13cf38b5b2b",
+      "serverId": "5979fb85-960d-4ec4-8ce0-8568b21942fe"
+    }
+  ]
+}
