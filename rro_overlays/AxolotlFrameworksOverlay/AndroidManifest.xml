@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+SPDX-FileCopyrightText: Copyright (C) SHIFT GmbH
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="eco.shift.overlay.frameworks.axolotl">
+    <application android:hasCode="false" />
+    <overlay android:targetPackage="android" android:isStatic="true" android:priority="0" />
+</manifest>

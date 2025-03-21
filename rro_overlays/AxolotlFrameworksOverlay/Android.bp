@@ -1,0 +1,11 @@
+//
+// Copyright (C) SHIFT GmbH
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "AxolotlFrameworksOverlay",
+    certificate: "platform",
+    product_specific: true,
+}
