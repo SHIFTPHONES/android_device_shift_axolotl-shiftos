@@ -9,11 +9,7 @@
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
 
-ifeq ($(WITH_GMS_MAINLINE),true)
-    PRIVATE_KEY_PATH := vendor/shiftos/private/keys/mainline/avb-4096.pem
-else
-    PRIVATE_KEY_PATH := vendor/shiftos/private/keys/stock/avb-4096.pem
-endif
+PRIVATE_KEY_PATH := vendor/shiftos/private/keys/avb/axolotl-4096.pem
 
 # If private key does not exist, fallback to testkey
 ifeq ($(wildcard $(PRIVATE_KEY_PATH)),)
