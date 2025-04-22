@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 SHIFT GmbH
+# Copyright (C) SHIFT GmbH
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -18,22 +18,17 @@ PRODUCT_NAME := axolotl
 
 #############################################################
 
-PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
-
 # Enforce native interfaces of product partition as VNDK
 #PRODUCT_PRODUCT_VNDK_VERSION := current
 
 # Enforce java interfaces of product partition
-#PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
+PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := false
 
 #############################################################
 
 # APEX
 PRODUCT_COMPRESSED_APEX := true
 MAINLINE_COMPRESS_APEX_ALL := $(PRODUCT_COMPRESSED_APEX)
-
-# Build super partition
-PRODUCT_BUILD_SUPER_PARTITION := true
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -45,19 +40,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     media.mediadrmservice.enable=true \
 
-# Enforce priv-app permissions
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=log
-else
-PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
-endif
-
-# GMS
-GMS_MAKEFILE := gms_eea_v2_type4c.mk
-MAINLINE_MODULES_MAKEFILE := mainline_modules.mk
+# DRM - Widevine
+#include vendor/widevine/service.mk
 
 # Overlays
 PRODUCT_PACKAGES += AxolotlFrameworksOverlay
-
-# DRM - Widevine
-#include vendor/widevine/service.mk

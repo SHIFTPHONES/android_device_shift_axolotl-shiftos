@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-2023 SHIFT GmbH
+# Copyright (C) SHIFT GmbH
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -69,9 +69,3 @@ endif
 ifneq ($(TARGET_BUILD_VARIANT),user)
     BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000
 endif
-
-# Security patch level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
-# Super
-BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
