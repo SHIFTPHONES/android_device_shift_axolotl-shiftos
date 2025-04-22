@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Include common SHIFT device BoardConfig
+include device/shift/common/BoardConfig.mk
+
 ### AVB
 
 # Enable AVB 2.0
@@ -69,9 +72,6 @@ endif
 
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
-# Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += device/shift/axolotl/shiftos/sepolicy/vendor/automation_setup
 
 # Super
 BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true

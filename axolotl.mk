@@ -7,6 +7,9 @@
 # Inherit from full device.
 $(call inherit-product, device/shift/axolotl/full_axolotl.mk)
 
+# Inherit from common device.
+$(call inherit-product, device/shift/common/common.mk)
+
 # Inherit some common SHIFT stuff.
 $(call inherit-product, vendor/shiftos/config/common_full.mk)
 
@@ -28,14 +31,6 @@ PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
 # APEX
 PRODUCT_COMPRESSED_APEX := true
 MAINLINE_COMPRESS_APEX_ALL := $(PRODUCT_COMPRESSED_APEX)
-
-# Automation/ATS
-PRODUCT_PACKAGES += \
-    automation_setup \
-
-ifeq ($(WITH_AUTOMATION_USERDATA),true)
-PRODUCT_PACKAGES += automation_trigger
-endif
 
 # Build super partition
 PRODUCT_BUILD_SUPER_PARTITION := true
